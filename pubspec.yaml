@@ -1,0 +1,37 @@
+name: sj_weather
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  http:
+  html:
+  geolocator: ^6.1.13
+  path_provider: ^1.6.24
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+flutter:
+  assets:
+    - assets/icons/01d.png
+    - assets/icons/02d.png
+    - assets/icons/03d.png
+    - assets/icons/04d.png
+    - assets/icons/09d.png
+    - assets/icons/10d.png
+    - assets/icons/11d.png
+    - assets/icons/13d.png
+    - assets/icons/50d.png
+    
+
+  uses-material-design: true
