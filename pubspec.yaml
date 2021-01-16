@@ -14,8 +14,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  http:
-  html:
+  http: ^0.12.2
+  html: ^0.14.0+4
   geolocator: ^6.1.13
   path_provider: ^1.6.24
   cupertino_icons: ^1.0.0
@@ -33,5 +33,4 @@ flutter:
     - assets/icons/13d.png
     - assets/icons/50d.png
     
-
   uses-material-design: true
