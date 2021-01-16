@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../ScreenFavorites.dart';
-
 class AppTopBar extends StatefulWidget {
   final String placeName;
   final VoidCallback onFavorClicked;
