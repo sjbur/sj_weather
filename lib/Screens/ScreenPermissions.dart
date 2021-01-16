@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:geolocator/geolocator.dart';
-import 'package:sj_weather/Screens/ScreenForecastToday.dart';
+import 'ScreenForecast.dart';
 
 class ScreenPermissions extends StatefulWidget {
   @override
@@ -36,7 +36,7 @@ class _ScreenPermissionsState extends State<ScreenPermissions> {
                 Navigator.pushReplacement(
                     context,
                     new MaterialPageRoute(
-                        builder: (context) => ScreenForecastToday()));
+                        builder: (context) => ScreenForecast()));
               } else {
                 print("No permission granted");
 

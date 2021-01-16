@@ -3,7 +3,7 @@ import 'package:geolocator/geolocator.dart';
 // import 'package:sj_weather/Screens/ScreenFavorites.dart';
 // import 'package:sj_weather/Screens/ScreenForecastToday.dart';
 import 'package:sj_weather/Screens/ScreenPermissions.dart';
-import 'package:sj_weather/Screens/Widgets/TestScreen.dart';
+import 'package:sj_weather/Screens/ScreenForecast.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Misty',
-        home: permissionGranted ? TestScreen() : ScreenPermissions(),
+        home: permissionGranted ? ScreenForecast() : ScreenPermissions(),
         debugShowCheckedModeBanner: debug,
         theme: ThemeData(
           brightness: Brightness.dark,

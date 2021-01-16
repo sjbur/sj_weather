@@ -98,7 +98,7 @@ Future<Forecast> extract(String yandexUrl) async {
       String temp = child
           .getElementsByClassName("forecast-briefly__temp_day")[0]
           .text
-          .replaceAll(new RegExp(r'[^0-9]'), '');
+          .replaceAll(new RegExp(r"[a-zA-Zа-яА-ЯёЁ]"), '');
       String icon;
       child.nodes[0].children.forEach((element) {
         if (element.attributes.containsKey("src"))
@@ -107,21 +107,13 @@ Future<Forecast> extract(String yandexUrl) async {
               icon = clas.replaceAll("icon_thumb_", "");
           });
       });
-      fr.forecastForWeek.add(DayForecast(fullDayName(dayName), temp, icon));
+      fr.forecastForWeek.add(
+          DayForecast(fullDayName(dayName), temp, findConditionIcon(icon)));
 
       i++;
     }
 
     auf++;
-
-    // if (!found) if (child.classes.contains("forecast-briefly__day_weekstart")) {
-    //   found = true;
-    // }
-  });
-
-  print("week: ");
-  fr.forecastForWeek.forEach((element) {
-    print(element.dayName);
   });
 
   return fr;
@@ -201,69 +193,81 @@ String findConditionIcon(String str) {
     case "ovc":
       res = "assets/icons/day/04d.png";
       break;
-    case "ovc_-ra":
+    case "ovc-ra":
       res = "assets/icons/day/09d.png";
       break;
-    case "ovc_-sn":
+    case "ovc-sn":
       res = "assets/icons/day/13d.png";
       break;
-    case "ovc_ra":
+    case "ovc-ra":
       res = "assets/icons/day/09d.png";
       break;
-    case "ovc_sn":
+    case "ovc-sn":
       res = "assets/icons/day/13d.png";
       break;
-    case "ovc_ra_sn":
+    case "ovc-m-sn":
       res = "assets/icons/day/13d.png";
       break;
-    case "ovc_ts_ra":
+    case "ovc-ra-sn":
+      res = "assets/icons/day/13d.png";
+      break;
+    case "ovc-ts-ra":
       res = "assets/icons/day/11d.png";
       break;
 
-    case "bkn_-ra_d":
+    case "bkn-ra-d":
       res = "assets/icons/day/09d.png";
       break;
-    case "bkn_-sn_d":
+    case "bkn-sn-d":
       res = "assets/icons/day/13d.png";
       break;
-    case "bkn_d":
+    case "bkn-d":
       res = "assets/icons/day/03d.png";
       break;
-    case "bkn_ra_d":
+    case "bkn-ra-d":
       res = "assets/icons/day/09d.png";
       break;
-    case "bkn_sn_d":
+    case "bkn-sn-d":
       res = "assets/icons/day/13d.png";
       break;
 
-    case "bkn_-ra_n":
+    case "bkn-ra-n":
       res = "assets/icons/day/09d.png";
       break;
-    case "bkn_-sn_n":
+    case "bkn-sn-n":
       res = "assets/icons/day/13d.png";
       break;
-    case "bkn_n":
+    case "bkn-d":
       res = "assets/icons/day/03d.png";
       break;
-    case "bkn_ra_n":
+    case "bkn-n":
+      res = "assets/icons/day/03d.png";
+      break;
+    case "bkn-ra-n":
       res = "assets/icons/day/09d.png";
       break;
-    case "bkn_sn_n":
+    case "bkn-sn-n":
+      res = "assets/icons/day/13d.png";
+      break;
+    case "bkn-m-sn-d":
+      res = "assets/icons/day/13d.png";
+      break;
+    case "bkn-m-sn-n":
       res = "assets/icons/day/13d.png";
       break;
 
-    case "fg_d":
+    case "fg-d":
       res = "assets/icons/day/50d.png";
       break;
-    case "fg_n":
+    case "fg-n":
       res = "assets/icons/day/50d.png";
       break;
 
-    case "skc_d":
+    case "skc-d":
       res = "assets/icons/day/01d.png";
       break;
 
-    case "skc_n":
+    case "skc-n":
       res = "assets/icons/night/01n.png";
       break;
 

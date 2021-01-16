@@ -27,35 +27,35 @@ class _WeekForecastTabState extends State<WeekForecastTab> {
                   DayForecastThumbnal(
                       widget.forecast.forecastForWeek[0].dayName,
                       widget.forecast.forecastForWeek[0].temp,
-                      "assets/icons/day/04d.png"),
+                      widget.forecast.forecastForWeek[0].icon),
                   DayForecastThumbnal(
                       widget.forecast.forecastForWeek[1].dayName,
                       widget.forecast.forecastForWeek[1].temp,
-                      "assets/icons/day/03d.png"),
+                      widget.forecast.forecastForWeek[1].icon),
                   DayForecastThumbnal(
                       widget.forecast.forecastForWeek[2].dayName,
                       widget.forecast.forecastForWeek[2].temp,
-                      "assets/icons/day/03d.png"),
+                      widget.forecast.forecastForWeek[2].icon),
                 ]),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   DayForecastThumbnal(
                       widget.forecast.forecastForWeek[3].dayName,
                       widget.forecast.forecastForWeek[3].temp,
-                      "assets/icons/day/03d.png"),
+                      widget.forecast.forecastForWeek[3].icon),
                   DayForecastThumbnal(
                       widget.forecast.forecastForWeek[4].dayName,
                       widget.forecast.forecastForWeek[4].temp,
-                      "assets/icons/day/03d.png"),
+                      widget.forecast.forecastForWeek[4].icon),
                   DayForecastThumbnal(
                       widget.forecast.forecastForWeek[5].dayName,
                       widget.forecast.forecastForWeek[5].temp,
-                      "assets/icons/day/03d.png"),
+                      widget.forecast.forecastForWeek[5].icon),
                 ]),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   DayForecastThumbnal(
                       widget.forecast.forecastForWeek[6].dayName,
                       widget.forecast.forecastForWeek[6].temp,
-                      "assets/icons/day/03d.png"),
+                      widget.forecast.forecastForWeek[6].icon),
                 ])
               ],
             ),
@@ -93,7 +93,7 @@ class DayForecastThumbnal extends StatelessWidget {
           ),
         ),
         Text(
-          temp.toString() + "º",
+          temp.toString(), //"º"
           style: TextStyle(color: Colors.white),
         ),
         Padding(
