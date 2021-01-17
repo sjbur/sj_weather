@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sj_weather/YandexPogoda.dart' as Pogoda;
+import 'package:Misty/YandexPogoda.dart' as Pogoda;
 
 class DayForecastTab extends StatefulWidget {
   // final void Function(bool) setFavor;

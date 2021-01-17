@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:sj_weather/YandexPogoda.dart' as Pogoda;
+import 'package:Misty/YandexPogoda.dart' as Pogoda;
 
 class WeekForecastTab extends StatefulWidget {
   final Pogoda.Forecast forecast;
@@ -15,54 +15,57 @@ class WeekForecastTab extends StatefulWidget {
 class _WeekForecastTabState extends State<WeekForecastTab> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(14, 20, 8, 0),
-      child: Container(
-        child: Column(children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-            child: Column(
-              children: [
-                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  DayForecastThumbnal(
-                      widget.forecast.forecastForWeek[0].dayName,
-                      widget.forecast.forecastForWeek[0].temp,
-                      widget.forecast.forecastForWeek[0].icon),
-                  DayForecastThumbnal(
-                      widget.forecast.forecastForWeek[1].dayName,
-                      widget.forecast.forecastForWeek[1].temp,
-                      widget.forecast.forecastForWeek[1].icon),
-                  DayForecastThumbnal(
-                      widget.forecast.forecastForWeek[2].dayName,
-                      widget.forecast.forecastForWeek[2].temp,
-                      widget.forecast.forecastForWeek[2].icon),
-                ]),
-                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  DayForecastThumbnal(
-                      widget.forecast.forecastForWeek[3].dayName,
-                      widget.forecast.forecastForWeek[3].temp,
-                      widget.forecast.forecastForWeek[3].icon),
-                  DayForecastThumbnal(
-                      widget.forecast.forecastForWeek[4].dayName,
-                      widget.forecast.forecastForWeek[4].temp,
-                      widget.forecast.forecastForWeek[4].icon),
-                  DayForecastThumbnal(
-                      widget.forecast.forecastForWeek[5].dayName,
-                      widget.forecast.forecastForWeek[5].temp,
-                      widget.forecast.forecastForWeek[5].icon),
-                ]),
-                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  DayForecastThumbnal(
-                      widget.forecast.forecastForWeek[6].dayName,
-                      widget.forecast.forecastForWeek[6].temp,
-                      widget.forecast.forecastForWeek[6].icon),
-                ])
-              ],
-            ),
-          )
-        ]),
-      ),
-    );
+    if (widget.forecast == null)
+      return CircularProgressIndicator();
+    else
+      return Padding(
+        padding: const EdgeInsets.fromLTRB(14, 20, 8, 0),
+        child: Container(
+          child: Column(children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+              child: Column(
+                children: [
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    DayForecastThumbnal(
+                        widget.forecast.forecastForWeek[0].dayName,
+                        widget.forecast.forecastForWeek[0].temp,
+                        widget.forecast.forecastForWeek[0].icon),
+                    DayForecastThumbnal(
+                        widget.forecast.forecastForWeek[1].dayName,
+                        widget.forecast.forecastForWeek[1].temp,
+                        widget.forecast.forecastForWeek[1].icon),
+                    DayForecastThumbnal(
+                        widget.forecast.forecastForWeek[2].dayName,
+                        widget.forecast.forecastForWeek[2].temp,
+                        widget.forecast.forecastForWeek[2].icon),
+                  ]),
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    DayForecastThumbnal(
+                        widget.forecast.forecastForWeek[3].dayName,
+                        widget.forecast.forecastForWeek[3].temp,
+                        widget.forecast.forecastForWeek[3].icon),
+                    DayForecastThumbnal(
+                        widget.forecast.forecastForWeek[4].dayName,
+                        widget.forecast.forecastForWeek[4].temp,
+                        widget.forecast.forecastForWeek[4].icon),
+                    DayForecastThumbnal(
+                        widget.forecast.forecastForWeek[5].dayName,
+                        widget.forecast.forecastForWeek[5].temp,
+                        widget.forecast.forecastForWeek[5].icon),
+                  ]),
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    DayForecastThumbnal(
+                        widget.forecast.forecastForWeek[6].dayName,
+                        widget.forecast.forecastForWeek[6].temp,
+                        widget.forecast.forecastForWeek[6].icon),
+                  ])
+                ],
+              ),
+            )
+          ]),
+        ),
+      );
   }
 }
 

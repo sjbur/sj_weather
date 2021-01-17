@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:sj_weather/YandexPogoda.dart' as Pogoda;
-import 'package:sj_weather/Scripts/favorites.dart';
+import 'package:Misty/YandexPogoda.dart' as Pogoda;
+import 'package:Misty/Scripts/favorites.dart';
 
 class ScreenFavorites extends StatefulWidget {
   @override

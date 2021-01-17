@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
-import 'package:sj_weather/YandexPogoda.dart' as Pogoda;
+import 'package:Misty/YandexPogoda.dart' as Pogoda;
 
 class Favorites {
   List<Pogoda.City> cities;

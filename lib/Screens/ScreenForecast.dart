@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:sj_weather/Screens/Widgets/AppTabsMenu.dart';
-import 'package:sj_weather/Screens/Widgets/AppTopBar.dart';
+import 'package:Misty/Screens/Widgets/AppTabsMenu.dart';
+import 'package:Misty/Screens/Widgets/AppTopBar.dart';
 
-import 'package:sj_weather/Screens/Widgets/DayForecastTab.dart';
-import 'package:sj_weather/Screens/Widgets/WeekForecastTab.dart';
-import 'package:sj_weather/Scripts/favorites.dart';
+import 'package:Misty/Screens/Widgets/DayForecastTab.dart';
+import 'package:Misty/Screens/Widgets/WeekForecastTab.dart';
+import 'package:Misty/Scripts/favorites.dart';
 
-import 'package:sj_weather/YandexPogoda.dart' as Pogoda;
+import 'package:Misty/YandexPogoda.dart' as Pogoda;
 
 import 'ScreenFavorites.dart';
 

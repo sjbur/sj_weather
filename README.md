@@ -1,4 +1,4 @@
-# sj_weather
+# Misty
 
 A new Flutter project.
 

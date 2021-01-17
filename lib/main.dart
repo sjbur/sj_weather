@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-// import 'package:sj_weather/Screens/ScreenFavorites.dart';
-// import 'package:sj_weather/Screens/ScreenForecastToday.dart';
-import 'package:sj_weather/Screens/ScreenPermissions.dart';
-import 'package:sj_weather/Screens/ScreenForecast.dart';
+// import 'package:Misty/Screens/ScreenFavorites.dart';
+// import 'package:Misty/Screens/ScreenForecastToday.dart';
+import 'package:Misty/Screens/ScreenPermissions.dart';
+import 'package:Misty/Screens/ScreenForecast.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
