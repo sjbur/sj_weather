@@ -285,13 +285,13 @@ String findConditionIcon(String str) {
 
     //
 
-    case "skc-d":
-      res = "assets/icons/day/01d.png";
-      break;
+    // case "skc-d":
+    //   res = "assets/icons/day/01d.png";
+    //   break;
 
-    case "skc-n":
-      res = "assets/icons/day/01d.png";
-      break;
+    // case "skc-n":
+    //   res = "assets/icons/day/01d.png";
+    //   break;
 
     default:
       print("err: " + str);

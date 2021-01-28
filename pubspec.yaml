@@ -23,14 +23,15 @@ dependencies:
 dev_dependencies:
 flutter:
   assets:
-    - assets/icons/01d.png
-    - assets/icons/02d.png
-    - assets/icons/03d.png
-    - assets/icons/04d.png
-    - assets/icons/09d.png
-    - assets/icons/10d.png
-    - assets/icons/11d.png
-    - assets/icons/13d.png
-    - assets/icons/50d.png
-    
+    - assets/icons/day/01d.png
+    - assets/icons/day/02d.png
+    - assets/icons/day/03d.png
+    - assets/icons/day/04d.png
+    - assets/icons/day/09d.png
+    - assets/icons/day/10d.png
+    - assets/icons/day/11d.png
+    - assets/icons/day/13d.png
+    - assets/icons/day/50d.png
+  
+    - assets/icons/night/01n.png
   uses-material-design: true
